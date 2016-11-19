@@ -29,15 +29,6 @@ void loop()
   Serial.println();
   delay(10);
 
- /* if(LED == LOW){
-    if(total1 <= 15) { //if is pressed
-     digitalWrite(LED, HIGH); //write 1 or HIGH to led pin
-  } else { //if not pressed
-     digitalWrite(LED, LOW);  //write 0 or low to led pin
-  } 
-    
-  }*/
-
   stateButton = digitalRead(pinButton);
   if(stateButton == HIGH && previous == LOW && millis() - time > 200){
     if(stateLED == HIGH){
@@ -50,16 +41,6 @@ void loop()
 
    digitalWrite(LED,stateLED);
    previous = stateButton;
-  
-/*  if(total1 <= 15) { //if is pressed
-     digitalWrite(LED, HIGH); //write 1 or HIGH to led pin
-  } 
-
-  if(total1 >= 15){ // not pressed
-    digitalWrite(LED, LOW);
-  } */
-  
-
 }
 
 
